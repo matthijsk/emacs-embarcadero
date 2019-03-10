@@ -4,7 +4,7 @@
 
 ;; Author: Matthijs Kool <contact@matthijskool.nl>
 ;; Created: 27 Feb 2019
-;; Version: 0.1
+;; Version: 0.1.1
 ;; Keywords: languages, tools
 ;; URL: https://github.com/matthijsk/emacs-embarcadero
 
@@ -35,14 +35,18 @@
 
 ;;; Code:
 
+;;;###autoload
 (define-generic-mode dfm-mode
   nil ; comment list
   '("inherited" "object" "end" "True" "False")
   '(("\\<[0-9]+" . font-lock-constant-face)
     ("'.*'" . font-lock-string-face))
-  '("\\.dfm\\'" "\\.DFM\\'")
+  '("\\.dfm\\'")
   nil
   "Generic mode for editing Embarcadero DFM files.")
+
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode))
 
 (defgroup embarcadero nil "Embarcadero interoperability."
   :prefix "bds-")
