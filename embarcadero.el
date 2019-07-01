@@ -52,7 +52,8 @@
 (add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode))
 
 (defgroup embarcadero nil "Embarcadero interoperability."
-  :prefix "bds-")
+  :prefix "bds-"
+  :group 'tools)
 
 (defcustom bds-installation-dir "C:/Program Files (x86)/Embarcadero/Studio/19.0/"
   "Embarcadero C++ Builder installation directory."
