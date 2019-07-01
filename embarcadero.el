@@ -30,6 +30,9 @@
 ;; Provides dfm-mode, a generic mode to enable syntax highlighting for
 ;; Embarcadero DFM files.
 ;;
+;; Provides bds-insert-todo-comment, a convenience function to insert C++
+;; Builder style TODO comments.
+;;
 ;; Provides bds-show-help, a convenience function to quickly launch the
 ;; Embarcadero documentation viewers.
 
@@ -60,6 +63,18 @@
   "Embarcadero C++ Builder help directory."
   :type '(directory)
   :group 'embarcadero)
+
+(defcustom bds-user-name (user-login-name)
+  "User name for use in C++ Builder TODO comments."
+  :type '(string)
+  :group 'embarcadero)
+
+(defun bds-insert-todo-comment (comment category)
+  "Insert C++ Builder TODO comment.
+A TODO item has the format \"/* TODO -oAuthor -cCategory : Comment */\",
+where author is set in `bds-user-name'."
+  (interactive "*MTODO: \nMCategory: ")
+  (insert (format "/* TODO -o%s -c%s : %s */" bds-user-name category comment)))
 
 (defun bds-show-help ()
   "Show Embarcadero integrated help.

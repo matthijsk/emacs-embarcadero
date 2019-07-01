@@ -5,5 +5,8 @@ Emacs.
 Provides ~dfm-mode~, a generic mode to enable syntax highlighting for Embarcadero
 =DFM= files.
 
+Provides ~bds-insert-todo-comment~, a convenience function to insert C++ Builder
+style TODO comments.
+
 Provides ~bds-show-help~, a convenience function to quickly launch the
 Embarcadero documentation viewers.
