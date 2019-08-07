@@ -65,17 +65,22 @@
   :type '(directory)
   :group 'embarcadero)
 
-(defcustom bds-user-name (user-login-name)
-  "User name for use in C++ Builder TODO comments."
-  :type '(string)
-  :group 'embarcadero)
-
-(defun bds-insert-todo-comment (comment category)
+(defun bds-insert-todo-comment (comment &optional priority owner category)
   "Insert C++ Builder TODO comment.
-A TODO item has the format \"/* TODO -oAuthor -cCategory : Comment */\",
-where author is set in `bds-user-name'."
-  (interactive "*MTODO: \nMCategory: ")
-  (insert (format "/* TODO -o%s -c%s : %s */" bds-user-name category comment)))
+PRIORITY must be a number between 0 and 5. If PRIORITY is not a
+number or equal to 0 it is not recorded in the comment.
+
+A TODO item has the format \"/* TODO PRIORITY -oOWNER -cCATEGORY : COMMENT
+*/\"."
+  (interactive "*MComment: \nnPriority: \nMOwner: \nMCategory: ")
+  (insert (concat "/* TODO "
+                  (when (and (integerp priority) (>= priority 1) (<= priority 5))
+                    (concat (number-to-string priority) " "))
+                  (when (> (length owner) 0)
+                    (concat "-o" owner " "))
+                  (when (> (length category) 0)
+                    (concat "-c" category " "))
+                  ": " comment " */")))
 
 (defun bds-show-help ()
   "Show Embarcadero integrated help.
