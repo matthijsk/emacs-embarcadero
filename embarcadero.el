@@ -65,6 +65,7 @@
   :type '(directory)
   :group 'embarcadero)
 
+;;;###autoload
 (defun bds-insert-todo-comment (comment &optional priority owner category)
   "Insert C++ Builder TODO comment.
 PRIORITY must be a number between 0 and 5. If PRIORITY is not a
@@ -83,6 +84,7 @@ A TODO item has the format \"/* TODO PRIORITY -oOWNER -cCATEGORY : COMMENT
                     (concat "-c" category " "))
                   ": " comment " */")))
 
+;;;###autoload
 (defun bds-show-help ()
   "Show Embarcadero integrated help.
 Displays an interactive menu where the user can choose between
