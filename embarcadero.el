@@ -68,7 +68,8 @@
 (defun bds-insert-todo-comment (comment &optional priority owner category)
   "Insert C++ Builder TODO comment.
 PRIORITY must be a number between 0 and 5. If PRIORITY is not a
-number or equal to 0 it is not recorded in the comment.
+number, equal to 0 or larger than 5 it is not recorded in the
+comment.
 
 A TODO item has the format \"/* TODO PRIORITY -oOWNER -cCATEGORY : COMMENT
 */\"."
