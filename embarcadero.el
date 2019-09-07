@@ -48,9 +48,6 @@
   nil
   "Generic mode for editing Embarcadero DFM files.")
 
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode))
-
 (defgroup embarcadero nil "Embarcadero interoperability."
   :prefix "bds-"
   :group 'tools)
