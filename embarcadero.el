@@ -35,6 +35,8 @@
 ;;
 ;; Provides bds-show-help, a convenience function to quickly launch the
 ;; Embarcadero documentation viewers.
+;;
+;; Sets up auto-mode-alist autoloads for common Embarcadero project file types.
 
 ;;; Code:
 
@@ -47,6 +49,18 @@
   '("\\.dfm\\'")
   nil
   "Generic mode for editing Embarcadero DFM files.")
+
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.cbproj\\'" . xml-mode))
+
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.groupproj\\'" . xml-mode))
+
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.rh\\'" . c++-mode))
+
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.rc\\'" . c++-mode))
 
 (defgroup embarcadero nil "Embarcadero interoperability."
   :prefix "bds-"
