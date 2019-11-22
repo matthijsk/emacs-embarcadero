@@ -10,3 +10,21 @@ style TODO comments.
 
 Provides ~bds-show-help~, a convenience function to quickly launch the
 Embarcadero documentation viewers.
+
+You can customize ~bds-installation-dir~ to point to your IDE installation path.
+By default, it is set to ="C:/Program Files (x86)/Embarcadero/Studio/19.0/"=.
+
+** Installation
+Make a clone of the git repository and add the path to your clone to
+=load-path=:
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path (directory-file-name "/path/to/emacs-embarcadero/"))
+  (require 'embarcadero)
+#+END_SRC
+
+Alternatively, if you use =use-package=:
+#+BEGIN_SRC emacs-lisp
+  (use-package embarcadero
+    :mode ("\\.dfm\\'" . dfm-mode)
+    :load-path "/path/to/emacs-embarcadero/")
+#+END_SRC
