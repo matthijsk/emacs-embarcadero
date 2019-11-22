@@ -50,21 +50,6 @@
   nil
   "Generic mode for editing Embarcadero DFM files.")
 
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.cbproj\\'" . xml-mode))
-
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.groupproj\\'" . xml-mode))
-
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.rh\\'" . c++-mode))
-
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.rc\\'" . c++-mode))
-
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode))
-
 (defgroup embarcadero nil "Embarcadero interoperability."
   :prefix "bds-"
   :group 'tools)
@@ -132,6 +117,14 @@ variable `bds-help-dir'."
                        (concat bds-help-dir "/" (completing-read "Choose Embarcadero help category: " choices) ".chm")
                        nil
                        3)))
+
+;;;###autoload
+(progn
+  (add-to-list 'auto-mode-alist '("\\.cbproj\\'" . xml-mode))
+  (add-to-list 'auto-mode-alist '("\\.groupproj\\'" . xml-mode))
+  (add-to-list 'auto-mode-alist '("\\.rh\\'" . c++-mode))
+  (add-to-list 'auto-mode-alist '("\\.rc\\'" . c++-mode))
+  (add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode)))
 
 (provide 'embarcadero)
 
