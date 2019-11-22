@@ -62,6 +62,9 @@
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.rc\\'" . c++-mode))
 
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode))
+
 (defgroup embarcadero nil "Embarcadero interoperability."
   :prefix "bds-"
   :group 'tools)
