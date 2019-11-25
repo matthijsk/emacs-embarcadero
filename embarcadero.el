@@ -40,6 +40,8 @@
 
 ;;; Code:
 
+(require 'generic-x)
+
 ;;;###autoload
 (define-generic-mode dfm-mode
   nil ; comment list
@@ -123,8 +125,8 @@ variable `bds-help-dir'."
   (add-to-list 'auto-mode-alist '("\\.cbproj\\'" . xml-mode))
   (add-to-list 'auto-mode-alist '("\\.groupproj\\'" . xml-mode))
   (add-to-list 'auto-mode-alist '("\\.rh\\'" . c++-mode))
-  (add-to-list 'auto-mode-alist '("\\.rc\\'" . c++-mode))
-  (add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode)))
+  (add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode))
+  (add-to-list 'auto-mode-alist '("\\.rc\\'" . rc-generic-mode)))
 
 (provide 'embarcadero)
 
