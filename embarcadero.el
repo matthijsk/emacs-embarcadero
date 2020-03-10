@@ -124,6 +124,7 @@ variable `bds-help-dir'."
 (progn
   (add-to-list 'auto-mode-alist '("\\.cbproj\\'" . xml-mode))
   (add-to-list 'auto-mode-alist '("\\.groupproj\\'" . xml-mode))
+  (add-to-list 'auto-mode-alist '("\\.optset\\'" . xml-mode))
   (add-to-list 'auto-mode-alist '("\\.rh\\'" . c++-mode))
   (add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode))
   (add-to-list 'auto-mode-alist '("\\.rc\\'" . rc-generic-mode)))
