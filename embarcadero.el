@@ -34,7 +34,8 @@
 ;; Builder style TODO comments.
 ;;
 ;; Provides bds-show-help, a convenience function to quickly launch the
-;; Embarcadero documentation viewers.
+;; Embarcadero documentation viewers, and bds-show-online-help, to look up
+;; documentation at the Embarcadero docwiki website.
 ;;
 ;; Sets up auto-mode-alist autoloads for common Embarcadero project file types.
 
@@ -64,6 +65,24 @@
 (defcustom bds-help-dir (concat bds-installation-dir "Help/Doc")
   "Embarcadero C++ Builder help directory."
   :type '(directory)
+  :group 'embarcadero)
+
+(defcustom bds-online-help-version 'Rio
+  "Default Embarcadero online RAD Studio help lookup version.
+Used by `bds-help-lookup' to determine the search url."
+  :type '(choice (const :tag "10.3 Rio" Rio)
+                 (const :tag "10.2 Tokyo" Tokyo)
+                 (const :tag "10.1 Berlin" Berlin)
+                 (const :tag "XE8" XE8)
+                 (const :tag "XE7" XE7)
+                 (const :tag "XE6" XE6)
+                 (const :tag "XE5" XE5)
+                 (const :tag "XE4" XE4)
+                 (const :tag "XE3" XE3)
+                 (const :tag "XE2" XE2)
+                 (const :tag "XE" XE)
+                 (const :tag "2010" 2010)
+                 (string :tag "Custom"))
   :group 'embarcadero)
 
 ;;;###autoload
@@ -119,6 +138,15 @@ variable `bds-help-dir'."
                        (concat bds-help-dir "/" (completing-read "Choose Embarcadero help category: " choices) ".chm")
                        nil
                        3)))
+
+(defun bds-show-online-help (arg)
+  "Search http://docwiki.embarcadero.com for ARG, using `browse-url'.
+The preferred documentation version can be customized in
+`bds-online-help-version'."
+  (interactive (list (read-string "Search docwiki: " (thing-at-point 'symbol t))))
+  (browse-url
+   (format "http://docwiki.embarcadero.com/RADStudio/%s/e/index.php?search=%s"
+           bds-online-help-version arg)))
 
 ;;;###autoload
 (progn

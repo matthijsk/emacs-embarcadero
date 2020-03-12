@@ -8,8 +8,12 @@ Provides ~dfm-mode~, a generic mode to enable syntax highlighting for Embarcader
 Provides ~bds-insert-todo-comment~, a convenience function to insert C++ Builder
 style TODO comments.
 
-Provides ~bds-show-help~, a convenience function to quickly launch the
-Embarcadero documentation viewers.
+Provides ~bds-show-local-help~, a convenience function to quickly launch the
+Embarcadero documentation viewers, and ~bds-show-online-help~, to look up
+documentation at the Embarcadero docwiki website.
+
+Customize ~bds-online-help-version~ to set your preferred version of the online
+documentation.
 
 You can customize ~bds-installation-dir~ to point to your IDE installation path.
 By default, it is set to ="C:/Program Files (x86)/Embarcadero/Studio/19.0/"=.
