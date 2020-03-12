@@ -33,7 +33,7 @@
 ;; Provides bds-insert-todo-comment, a convenience function to insert C++
 ;; Builder style TODO comments.
 ;;
-;; Provides bds-show-help, a convenience function to quickly launch the
+;; Provides bds-show-local-help, a convenience function to quickly launch the
 ;; Embarcadero documentation viewers, and bds-show-online-help, to look up
 ;; documentation at the Embarcadero docwiki website.
 ;;
@@ -105,7 +105,10 @@ A TODO item has the format \"/* TODO PRIORITY -oOWNER -cCATEGORY : COMMENT
                   ": " comment " */")))
 
 ;;;###autoload
-(defun bds-show-help ()
+(define-obsolete-function-alias #'bds-show-help #'bds-show-local-help "embarcadero.el 0.5.0")
+
+;;;###autoload
+(defun bds-show-local-help ()
   "Show Embarcadero integrated help.
 Displays an interactive menu where the user can choose between
 the following help categories:
