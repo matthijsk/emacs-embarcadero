@@ -47,7 +47,7 @@
 (define-generic-mode dfm-mode
   nil ; comment list
   '("inherited" "object" "end" "True" "False")
-  '(("\\<[0-9]+" . font-lock-constant-face)
+  '(("=\\ -?\\([0-9]+\\)" . (1 font-lock-constant-face))
     ("'.*'" . font-lock-string-face))
   '("\\.dfm\\'")
   nil
