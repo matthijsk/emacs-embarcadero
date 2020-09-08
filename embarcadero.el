@@ -149,7 +149,7 @@ The preferred documentation version can be customized in
 `bds-online-help-version'."
   (interactive (list (read-string "Search docwiki: " (thing-at-point 'symbol t))))
   (browse-url
-   (format "http://docwiki.embarcadero.com/RADStudio/%s/e/index.php?search=%s"
+   (format "http://docwiki.embarcadero.com/Libraries/%s/e/index.php?search=%s"
            bds-online-help-version arg)))
 
 ;;;###autoload
