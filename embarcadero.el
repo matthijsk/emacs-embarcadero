@@ -67,7 +67,7 @@
   :type '(directory)
   :group 'embarcadero)
 
-(defcustom bds-online-help-version 'Rio
+(defcustom bds-online-help-version 'Sidney
   "Default Embarcadero online RAD Studio help lookup version.
 Used by `bds-help-lookup' to determine the search url."
   :type '(choice (const :tag "10.4 Sidney" Sidney)
