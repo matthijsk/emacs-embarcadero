@@ -4,7 +4,7 @@
 
 ;; Author: Matthijs Kool <m.kool@stylecncmachines.com>
 ;; Created: 27 Feb 2019
-;; Version: 0.5.2
+;; Version: 0.5.4
 ;; Keywords: languages, tools
 ;; URL: http://scm-unix-02:3000/matthijs/emacs-embarcadero
 
