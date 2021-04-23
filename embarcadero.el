@@ -57,7 +57,7 @@
   :prefix "bds-"
   :group 'tools)
 
-(defcustom bds-installation-dir "C:/Program Files (x86)/Embarcadero/Studio/19.0/"
+(defcustom bds-installation-dir "C:/Program Files (x86)/Embarcadero/Studio/21.0/"
   "Embarcadero C++ Builder installation directory."
   :type '(directory)
   :group 'embarcadero)
