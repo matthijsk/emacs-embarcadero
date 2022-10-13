@@ -36,8 +36,6 @@
 ;; Provides bds-show-local-help, a convenience function to quickly launch the
 ;; Embarcadero documentation viewers, and bds-show-online-help, to look up
 ;; documentation at the Embarcadero docwiki website.
-;;
-;; Sets up auto-mode-alist autoloads for common Embarcadero project file types.
 
 ;;; Code:
 
@@ -157,12 +155,7 @@ The preferred documentation version can be customized in
 
 ;;;###autoload
 (progn
-  (add-to-list 'auto-mode-alist '("\\.cbproj\\'" . xml-mode))
-  (add-to-list 'auto-mode-alist '("\\.groupproj\\'" . xml-mode))
-  (add-to-list 'auto-mode-alist '("\\.optset\\'" . xml-mode))
-  (add-to-list 'auto-mode-alist '("\\.rh\\'" . c++-mode))
-  (add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode))
-  (add-to-list 'auto-mode-alist '("\\.rc\\'" . rc-generic-mode)))
+  (add-to-list 'auto-mode-alist '("\\.dfm\\'" . dfm-mode)))
 
 (provide 'embarcadero)
 
