@@ -70,7 +70,9 @@
 (defcustom bds-online-help-version 'Sydney
   "Default Embarcadero online RAD Studio help lookup version.
 Used by `bds-help-lookup' to determine the search url."
-  :type '(choice (const :tag "11.0 Alexandria" Alexandria)
+  :type '(choice (const :tag "11.2 Alexandria" Alexandria)
+                 (const :tag "11.1 Alexandria" Alexandria)
+                 (const :tag "11.0 Alexandria" Alexandria)
                  (const :tag "10.4 Sydney" Sydney)
                  (const :tag "10.3 Rio" Rio)
                  (const :tag "10.2 Tokyo" Tokyo)
