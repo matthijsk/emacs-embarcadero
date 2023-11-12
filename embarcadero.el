@@ -55,7 +55,7 @@
   :prefix "bds-"
   :group 'tools)
 
-(defcustom bds-installation-dir "C:/Program Files (x86)/Embarcadero/Studio/22.0/"
+(defcustom bds-installation-dir "C:/Program Files (x86)/Embarcadero/Studio/23.0/"
   "Embarcadero C++ Builder installation directory."
   :type '(directory)
   :group 'embarcadero)
@@ -68,7 +68,8 @@
 (defcustom bds-online-help-version 'Sydney
   "Default Embarcadero online RAD Studio help lookup version.
 Used by `bds-help-lookup' to determine the search url."
-  :type '(choice (const :tag "11.2 Alexandria" Alexandria)
+  :type '(choice (const :tag "12.0 Athens" Athens)
+                 (const :tag "11.2 Alexandria" Alexandria)
                  (const :tag "11.1 Alexandria" Alexandria)
                  (const :tag "11.0 Alexandria" Alexandria)
                  (const :tag "10.4 Sydney" Sydney)
