@@ -16,7 +16,7 @@ Customize ~bds-online-help-version~ to set your preferred version of the online
 documentation.
 
 You can customize ~bds-installation-dir~ to point to your IDE installation path.
-By default, it is set to ="C:/Program Files (x86)/Embarcadero/Studio/22.0/"=.
+By default, it is set to ~C:/Program Files (x86)/Embarcadero/Studio/22.0/~
 
 ** Installation
 Make a clone of the git repository and add the path to your clone to
