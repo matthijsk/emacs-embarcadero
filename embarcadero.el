@@ -2,11 +2,11 @@
 
 ;; Copyright © 2019 Matthijs Kool
 
-;; Author: Matthijs Kool <m.kool@stylecncmachines.com>
+;; Author: Matthijs Kool <matthijzk@gmail.com>
 ;; Created: 27 Feb 2019
 ;; Version: 12.0.0
 ;; Keywords: languages, tools
-;; URL: http://scm-unix-02:3000/matthijs/emacs-embarcadero
+;; URL: https://github.com/matthijsk/emacs-embarcadero
 
 ;; This file is NOT part of GNU Emacs.
 
